@@ -1,0 +1,5 @@
+0. 5.                     # xsrc,zsrc
+-0.01 10. -0.01 10.       # xmin,xmax,zmin,zmax
+10. 10. 15                  # theta,dtheta,ntheta
+1.e-3 10000                # dtau,nt_max
+10 1                       # ioption,idebug
