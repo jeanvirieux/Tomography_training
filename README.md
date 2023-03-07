@@ -1,30 +1,30 @@
 # Tomography training based on
 # ray approach and eikonal approach
 
-> Ray approach
+## Ray approach
 ==============
 
 Toy 2D codes for solving ordinary differential equations of ray tracing
 written in Python3.
 
->> Simple analytical cases:
+### Simple analytical cases:
 ===========================
 
 comparison between analytical solution and numerical solution based
 on Runge-Kutta 2nd order scheme
 
->>> case of the model where the square of slowness has an arbitrary
+>> case of the model where the square of slowness has an arbitrary
 constant gradient.
 
 
->>> case of the model where the velocity has a constant vertical gradient.
+>> case of the model where the velocity has a constant vertical gradient.
 
-## see the directory ray_tracing_analytic.template
+#### see the directory ray_tracing_analytic.template
 
 copy this directory in a working directory and follow the file 00README
 
 
->> Ray tracing with shooting conditions:
+### Ray tracing with shooting conditions:
 ========================================
 
 Illustration of a numerical ray tracing algorithm based on Runge-Kutta solver
@@ -32,11 +32,11 @@ and a grid description of the velocity. The velocity is interpolated by
 bspline functions. Such an interpolation allows the computation of spatial
 first-derivatives (and also second-derivatives)
 
-## see the directory ray_tracing_grid.template
+#### see the directory ray_tracing_grid.template
 
 copy this directory in a working directory and follow the file 00README
 
->> Ray tracing with boundary conditions:
+### Ray tracing with boundary conditions:
 ========================================
 
 Illustration of a numerical ray and paraxial ray tracing algorithm based on
@@ -48,15 +48,15 @@ respect to the ray-receiver distance.
 This is an illustration of the paraxial ray tracing which can be thought as
 a differential estimation of a given ray.
 
-## see the directory ray_tracing_two_points.template
+#### see the directory ray_tracing_two_points.template
 
 copy this directory in a working directory and follow the file 00README
 
 
-> Eikonal approach
+## Eikonal approach
 ==================
 
->> General comment
+### General comment
 
 Many codes exist for solving the Eikonal equation
 
@@ -102,16 +102,18 @@ how to use such a library through input and output files (agnostic to the comput
 langage you are using). I am using it embedded in a reverse-communication (RC)
 interface with my Fortan programs for tomography.
 
+### File_HFM interface
+
 For illustration, Python3 codes are provided for showing how to use this RC
 interface with the multiplex input and output files.
 
 This strategy is minimal, although I/O issues can be avoided.
 
-## see the directory HFM_File_Python.template
+#### see the directory HFM_File_Python.template
 
 copy this directory in a working directory and follow the file 00README
 
-Remark:
+### Remark:
 ======
 
 This HFM library has been interfaced with Python and other langages. The Python binding
@@ -121,7 +123,7 @@ install python and pybind11 (and also numpy and matplotlib)
 Such a binding is left to future investigation, but a skeleton Python3 code is provided
 in the HFM deposit.
 
-## see the directory HFM_Python.template (code is coming from the HFM deposit if J.-M. Mirebeau)
+#### see the directory HFM_Python.template (code is coming from the HFM deposit if J.-M. Mirebeau)
 
 copy this directory in a working directory and follow the file 00README
 
