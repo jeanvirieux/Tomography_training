@@ -1,13 +1,14 @@
-# Tomography training based on ray approach and eikonal approach
+# Tomography training based on
+# ray approach and eikonal approach
 
-Ray approach
-============
+> Ray approach
+==============
 
 Toy 2D codes for solving ordinary differential equations of ray tracing
 written in Python3.
 
-Simple analytical cases:
-=======================
+>> Simple analytical cases:
+===========================
 
 comparison between analytical solution and numerical solution based
 on Runge-Kutta 2nd order scheme
@@ -18,18 +19,25 @@ constant gradient.
 
 >>> case of the model where the velocity has a constant vertical gradient.
 
+## see the directory ray_tracing_analytic.template
 
-Ray tracing with shooting conditions:
-====================================
+copy this directory in a working directory and follow the file 00README
+
+
+>> Ray tracing with shooting conditions:
+========================================
 
 Illustration of a numerical ray tracing algorithm based on Runge-Kutta solver
 and a grid description of the velocity. The velocity is interpolated by
 bspline functions. Such an interpolation allows the computation of spatial
 first-derivatives (and also second-derivatives)
 
+## see the directory ray_tracing_grid.template
 
-Ray tracing with boundary conditions:
-====================================
+copy this directory in a working directory and follow the file 00README
+
+>> Ray tracing with boundary conditions:
+========================================
 
 Illustration of a numerical ray and paraxial ray tracing algorithm based on
 Runge-Kutta solver and a grid description of the velocity. Finding initial
@@ -37,9 +45,18 @@ conditions at the source in order to reach the receiver is performed through
 a Newton method where paraxial quantities provides the angle gradient with
 respect to the ray-receiver distance.
 
+This is an illustration of the paraxial ray tracing which can be thought as
+a differential estimation of a given ray.
 
-Eikonal approach
-================
+## see the directory ray_tracing_two_points.template
+
+copy this directory in a working directory and follow the file 00README
+
+
+> Eikonal approach
+==================
+
+>> General comment
 
 Many codes exist for solving the Eikonal equation
 
@@ -79,7 +96,7 @@ If you succeed to compile the library, congratulations. Code binaries will be
 sitting inside the directory "bin", especially the FileHFM_Isotropic2 (or
 FileHFM_Isotropic2.exe under windows)
 
-Such executable code (always rename it FileHFM_Isotropic2.exe if the extension is
+Such an executable code (always rename it FileHFM_Isotropic2.exe if the extension is
 missing even under linux) should be copied in the running directory for illustration
 how to use such a library through input and output files (agnostic to the computer
 langage you are using). I am using it embedded in a reverse-communication (RC)
@@ -90,16 +107,23 @@ interface with the multiplex input and output files.
 
 This strategy is minimal, although I/O issues can be avoided.
 
+## see the directory HFM_File_Python.template
+
+copy this directory in a working directory and follow the file 00README
+
 Remark:
 ======
 
-This library has been interfaced with Python and other langages. The Python binding
+This HFM library has been interfaced with Python and other langages. The Python binding
 has to be installed. Direct interface to C++ from Python3 can be from anaconda by
 install python and pybind11 (and also numpy and matplotlib)
 
-Such a binding is left to future investigation
+Such a binding is left to future investigation, but a skeleton Python3 code is provided
+in the HFM deposit.
 
+## see the directory HFM_Python.template (code is coming from the HFM deposit if J.-M. Mirebeau)
 
+copy this directory in a working directory and follow the file 00README
 
 
 
