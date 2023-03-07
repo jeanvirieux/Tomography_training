@@ -1,0 +1,71 @@
+TWO-POINTS RAY TRACING
+======================
+
+Using the paraxial information (point source conditions) for finding the ray
+reaching each receiver
+
+First STEP
+==========
+
+It creates the grid and the velocity map using model.py
+
+input file "model.inp" for a velocity with constant gradient and an exponential anomaly
+
+output file "model.hed" for numbers of nodes and grid steps in x and z
+output file "model.xzp" for the 2D regular grid
+output file "model.vel" for the velocity map on this grid
+
+Example of "model.inp"
+
+-0.01 -0.01            ! xorg,zorg
+1041 1041 0.1 0.1      ! nx,nz,dx,dz
+4. 0. 0.08             ! czero, gammax, gammaz
+50. 50. 2.3            ! x_ball, z_ball, dpert_v 
+
+SECOND STEP
+===========
+ 
+It performs the computation of shooting angles through Newton method using paraxial ray.
+Once done, successful rays are drawn.
+
+input file "shooting.inp" where the source, starting angle, receiver array,
+and integration step are defined.
+
+Example of "shooting.inp"
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+0. 0.0                     # xsrc,zsrc
+0.0 200. 0.0 100.          # xmin,xmax,zmin,zmax
+50.                        # trial theta
+18 1. 4                    # nobs,eps,ishoot
+100. 0.                    #  xobs,zobs
+120. 0.                    #  xobs,zobs
+140. 0.                    #  xobs,zobs
+160. 0.                    #  xobs,zobs
+180. 0.                    #  xobs,zobs
+180. 10.                   #  xobs,zobs
+180. 20.                   #  xobs,zobs
+180. 30.                   #  xobs,zobs
+180. 40.                   #  xobs,zobs
+180. 50.                   #  xobs,zobs
+180. 60.                   #  xobs,zobs
+180. 70.                   #  xobs,zobs
+180. 80.                   #  xobs,zobs
+180. 90.                   #  xobs,zobs
+160. 90.                   #  xobs,zobs
+140. 90.                   #  xobs,zobs
+120. 90.                   #  xobs,zobs
+100. 90.                   #  xobs,zobs
+1.e-1 10000                # dtau,nt_max
+0 1                        # ioption,idebug
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+python3 has been tested
+an efficient way is going through miniconda or anaconda environment
+
+python model.py
+
+python two_points_ray.py
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
