@@ -72,7 +72,7 @@ the causal front evolution at the expense of iterative model sampling.
 An efficient code is available in C++ by Jean-Marie Mirebeau providing not
 only times, but also rays and sensitivity kernels.
 
-The code cand be found at the following address
+The code can be found at the following address
 
 https://github.com/Mirebeau/HamiltonFastMarching (alias HFM)
 ============================================================
