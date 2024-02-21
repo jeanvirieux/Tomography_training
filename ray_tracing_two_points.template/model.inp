@@ -1,6 +1,0 @@
--0.01 -0.01            ! xorg,zorg
-1041 1041 0.2 0.1      ! nx,nz,dx,dz   
-3. 0.0 0.06             ! czero, gammax, gammaz
-100. 50.                ! x_ball, z_ball
-15. 15. 1.51           ! xrad,zrad,dpert_v 
-
