@@ -1,0 +1,53 @@
+Example of numerical ray tracing with given shooting angles
+based on runge-kutta second order and slowness square by bsplines
+
+First STEP
+==========
+
+It creates the grid and the velocity map using model.py
+
+input file "model.inp" for a velocity with constant gradient and an exponential anomaly
+
+output file "model.hed" for numbers of nodes and grid steps in x and z
+output file "model.xzp" for the 2D regular grid
+output file "model.vel" for the velocity map on this grid
+
+Example of "model.inp"
+
+-0.01 -0.01            ! xorg,zorg
+1041 1041 0.1 0.1      ! nx,nz,dx,dz
+4. 0. 0.08             ! czero, gammax, gammaz
+50. 50. 2.3            ! x_ball, z_ball, dpert_v 
+
+SECOND STEP
+===========
+ 
+It performs the ray tracing and do the plotting of rays
+
+input file "input.inp" where the source, shooting angles and integration step
+are defined.
+
+Example of "input.inp"
+
+0.0 0.0                     # xsrc,zsrc
+-0.01 100. -0.01 100.       # xmin,xmax,zmin,zmax
+20. 5. 10                 # theta,dtheta,ntheta
+1.e-1 10000                   # dtau,nt_max
+0 1                      # ioption,idebug
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Let us assume that the version of python is above 3.7
+If not, an efficient way is going through miniconda or anaconda
+for uptodate tools
+
+python model.py
+
+python ray_tracing.py
+
+output is ray_2D.pdf to be compated to ray_tracing_2D.pdf
+
+Please change input values for model and rays
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
