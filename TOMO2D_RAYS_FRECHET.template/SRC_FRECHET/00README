@@ -1,0 +1,9 @@
+
+Comments
+========
+
+ray_segment_P0.f90
+assume that the slowness is constant over each ray segment
+
+ray_segment_P1.f90
+assume that the slowness varies linearly inside each ray segment

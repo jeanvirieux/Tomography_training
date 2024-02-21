@@ -1,0 +1,24 @@
+#OPTION FOR Makefile defined here
+CC       = icc
+
+FC      = gfortran -Wunused -Wuninitialized -D -g -fbounds-check -Wall -fbacktrace -finit-real=nan
+FC      = gfortran -Wunused -Wuninitialized -D -g -fbounds-check -Wall -fbacktrace -finit-real=nan
+
+FC      = gfortran -Wunused -Wuninitialized -D -g -fbounds-check -fbacktrace -finit-real=nan
+FC      = gfortran -Wunused -Wuninitialized -D -g -fbounds-check -fbacktrace 
+
+FL = gfortran
+
+#OPTIONS COMPILE
+
+OPTF =  -O3   
+OPTC =  -O3  
+OPTL =  -O3   
+
+OPTFF = ${OPTF}
+
+# variables for librairies
+
+AR= ar
+ARFUNCT= cruv
+
