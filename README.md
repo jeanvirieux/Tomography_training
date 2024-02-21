@@ -116,7 +116,7 @@ copy this directory in a working directory and follow the file 00README
 ### Remark:
 ======
 
-This HFM library has been interfaced with Python and other langages. The Python binding
+This HFM library has been interfaced with Python and other langages by the author. The Python binding
 has to be installed. Direct interface to C++ from Python3 can be from anaconda by
 install python and pybind11 (and also numpy and matplotlib)
 
@@ -127,9 +127,22 @@ in the HFM deposit.
 
 copy this directory in a working directory and follow the file 00README
 
+## Toy examples of 2D first-arrival traveltime tomography
+==================
+
+Directories are TOMO2D_RAYS_FRECHET.template and TOMO2D_RAYS_GRADIENT.templage. They are using
+previous environment depending on gfortran, gnuplot and make. Be sure that you have these
+applications before copying these directories into running directories TOMO2D_RAYS_FRECHET and
+TOMO2D_RAYS_GRADIENT in order to avoid unwanted temporary files.
+
+These toy examples aims at the optimization illustration, making very simple the ray tracing
+part of the tomographical problem (only straight lines between sources and receivers). One
+goal would be the introduction of previous raytracing tools inside this optimization task.
+
+For each example, please have a look at the documentation inside respective directory DOC.
 
 
-
+Enjoy
 
 
 
